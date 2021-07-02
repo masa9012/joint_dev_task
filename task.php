@@ -248,13 +248,26 @@ foreach($users as $key => $user){
 }
 
 echo PHP_EOL;
-?>
+
 
 print("#####q17#####".PHP_EOL);
 class User
 {
+public $name;
+public $age;
+public $gender;
 
-  # コードを追加
+function __construct($name , $age , $gender){
+    $this->name = $name;
+    $this->age = $age;
+    $this->gender = $gender;
+}
+
+function info(){
+    print('名前:' . $this->name . PHP_EOL);
+    print('年齢:' . $this->age . PHP_EOL);
+    print('性別:' . $this->gender . PHP_EOL);
+}
 
 }
 
@@ -267,9 +280,26 @@ $user2->info();
 
 echo PHP_EOL;
 
+
 print("#####q18#####".PHP_EOL);
 
-  # コードを追加
+class Man{
+    public $name;
+    public $age;
+    
+    function __construct($name , $age){
+        $this->name = $name;
+        $this->age = $age;
+    }
+    
+    function introduce(){
+        if($this->age >= 20){
+            print('こんにちは、' . $this->name . 'と申します。宜しくお願いいたします。' . PHP_EOL);
+        }else{
+            print('はいさいまいど〜、' . $this->name . 'です!!!' . PHP_EOL);
+        }
+    }
+}
 
 $man1 = new Man("あじー", 32);
 $man2 = new Man("ゆたぼん", 10);
@@ -279,11 +309,12 @@ $man2->introduce();
 
 echo PHP_EOL;
 
+
 print("#####q19#####".PHP_EOL);
 class Item{
   # 以下を修正して下さい
-
-  protected $name;
+    public $name;
+  //protected $name;
 
   function __construct($book_name){
     $this->name = $book_name;
@@ -295,6 +326,7 @@ $book = new Item("ゼロ秒思考");
 print($book->name.PHP_EOL);
 
 echo PHP_EOL;
+?>
 
 print("#####q20#####".PHP_EOL);
 class Human
@@ -325,3 +357,4 @@ foreach($humans as $human){
 }
 
 echo PHP_EOL;
+?>
