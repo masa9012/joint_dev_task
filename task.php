@@ -326,21 +326,42 @@ $book = new Item("ゼロ秒思考");
 print($book->name.PHP_EOL);
 
 echo PHP_EOL;
-?>
+
 
 print("#####q20#####".PHP_EOL);
 class Human
 {
-
-  # コードを追加
-
+  public $name;
+  public $age;
+  
+  function __construct($name , $age){
+        $this->name = $name;
+        $this->age = $age;
+    }
 }
 
 class Zoo
 {
-
-  # コードを追加
-
+    public $name;
+    public $entry_fee;
+    
+  
+    function __construct($name , $entry_fee){
+        $this->name = $name;
+        $this->entry_fee = $entry_fee;
+    }
+  
+    function info_entry_fee($human){
+        if($human->age <= 5){
+            print $human->name . 'さんの入場料金は ' . $this->entry_fee["infant"] . ' 円です。' . PHP_EOL;
+        }elseif($human->age <= 15){
+            print $human->name . 'さんの入場料金は ' . $this->entry_fee["children"] . ' 円です。' . PHP_EOL;
+        }elseif($human->age <= 35){
+            print $human->name . 'さんの入場料金は ' . $this->entry_fee["adult"] . ' 円です。' . PHP_EOL;
+        }elseif($human->age <= 200){
+            print $human->name . 'さんの入場料金は ' . $this->entry_fee["senior"] . ' 円です。' . PHP_EOL;
+        }
+    }
 }
 
 $zoo = new Zoo("旭山動物園",["infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
@@ -357,4 +378,29 @@ foreach($humans as $human){
 }
 
 echo PHP_EOL;
+
+
+print("#####q21#####".PHP_EOL);
+//Q21. FizzBuzz問題の応用問題です。次の仕様、条件を満たすコードを書いて、1から30までの正の整数を期待する出力結果にして下さい。
+
+for($i = 1; $i <= 30; $i++){
+    if($i % 105 == 0){
+        print 'FizzBuzzHoge' . PHP_EOL;
+    }elseif($i % 35 == 0){
+        print 'BuzzHoge' . PHP_EOL;
+    }elseif($i % 21 == 0){
+        print 'FizzHoge' . PHP_EOL;
+    }elseif($i % 15 == 0){
+        print 'FizzBuzz' . PHP_EOL;
+    }elseif($i % 7 == 0){
+        print 'Hoge' . PHP_EOL;
+    }elseif($i % 35 == 0){
+        print 'Buzz' . PHP_EOL;
+    }elseif($i % 3 == 0){
+        print 'Fizz' . PHP_EOL;
+    }else{
+        print $i . PHP_EOL;
+    }
+}
+
 ?>
