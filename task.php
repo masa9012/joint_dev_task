@@ -252,22 +252,22 @@ echo PHP_EOL;
 
 print("#####q17#####".PHP_EOL);
 class User
-{
-public $name;
-public $age;
-public $gender;
-
-function __construct($name , $age , $gender){
-    $this->name = $name;
-    $this->age = $age;
-    $this->gender = $gender;
-}
-
-function info(){
-    print('名前:' . $this->name . PHP_EOL);
-    print('年齢:' . $this->age . PHP_EOL);
-    print('性別:' . $this->gender . PHP_EOL);
-}
+    {
+    public $name;
+    public $age;
+    public $gender;
+    
+    function __construct($name , $age , $gender){
+        $this->name = $name;
+        $this->age = $age;
+        $this->gender = $gender;
+    }
+    
+    function info(){
+        print('名前:' . $this->name . PHP_EOL);
+        print('年齢:' . $this->age . PHP_EOL);
+        print('性別:' . $this->gender . PHP_EOL);
+    }
 
 }
 
@@ -312,15 +312,15 @@ echo PHP_EOL;
 
 print("#####q19#####".PHP_EOL);
 class Item{
-  # 以下を修正して下さい
+    # 以下を修正して下さい
     public $name;
-  //protected $name;
+    //protected $name;
 
-  function __construct($book_name){
-    $this->name = $book_name;
+    function __construct($book_name){
+        $this->name = $book_name;
   }
 }
-  # 以下は変更しないで下さい
+    # 以下は変更しないで下さい
 
 $book = new Item("ゼロ秒思考");
 print($book->name.PHP_EOL);
@@ -331,10 +331,10 @@ echo PHP_EOL;
 print("#####q20#####".PHP_EOL);
 class Human
 {
-  public $name;
-  public $age;
-  
-  function __construct($name , $age){
+    public $name;
+    public $age;
+      
+    function __construct($name , $age){
         $this->name = $name;
         $this->age = $age;
     }
@@ -374,7 +374,7 @@ $human4 = new Human("ぎん", 108);
 $humans = [$human1, $human2, $human3, $human4];
 
 foreach($humans as $human){
-  $zoo->info_entry_fee($human);
+    $zoo->info_entry_fee($human);
 }
 
 echo PHP_EOL;
