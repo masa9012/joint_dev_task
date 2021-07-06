@@ -342,8 +342,8 @@ class Human
 
 class Zoo
 {
-    public $name;
-    public $entry_fee;
+    protected $name;
+    protected $entry_fee;
     
   
     function __construct($name , $entry_fee){
@@ -394,7 +394,7 @@ for($i = 1; $i <= 30; $i++){
         print 'FizzBuzz' . PHP_EOL;
     }elseif($i % 7 == 0){
         print 'Hoge' . PHP_EOL;
-    }elseif($i % 35 == 0){
+    }elseif($i % 5 == 0){
         print 'Buzz' . PHP_EOL;
     }elseif($i % 3 == 0){
         print 'Fizz' . PHP_EOL;
