@@ -354,11 +354,11 @@ class Zoo
     function info_entry_fee($human){
         if($human->age <= 5){
             print $human->name . 'さんの入場料金は ' . $this->entry_fee["infant"] . ' 円です。' . PHP_EOL;
-        }elseif($human->age <= 15){
+        }elseif($human->age <= 12){
             print $human->name . 'さんの入場料金は ' . $this->entry_fee["children"] . ' 円です。' . PHP_EOL;
-        }elseif($human->age <= 35){
+        }elseif($human->age <= 64){
             print $human->name . 'さんの入場料金は ' . $this->entry_fee["adult"] . ' 円です。' . PHP_EOL;
-        }elseif($human->age <= 200){
+        }elseif($human->age <= 120){
             print $human->name . 'さんの入場料金は ' . $this->entry_fee["senior"] . ' 円です。' . PHP_EOL;
         }
     }
